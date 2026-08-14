@@ -17,6 +17,7 @@ local Types =
 		ParsingString = ParsingString .. Sub
 	  end
 	end
+	if Defaults.DevMode then io.write(Defaults.Dev.InputProcessor.EndOfNormalType) end
 	return ResultingTable
   end,
 }
@@ -25,6 +26,6 @@ local Processor = {}
 
 function Processor.Execute(Type, Input)
   if Types[Type] then return Types[Type](Input) end
-  if Defaults.DevMode then io.write(Defaults.InputProcessor.EndOfFunction) end
+  if Defaults.DevMode then io.write(Defaults.Dev.InputProcessor.EndOfFunction) end
 end
 return Processor
