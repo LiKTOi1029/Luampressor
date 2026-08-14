@@ -11,7 +11,7 @@ local Defaults =
 Defaults.Errors = 
 {
   CommandNotFound = Defaults.ErrorPrompt .. "Command was not found! Please use the help command for commandlist\n",
-  SelectedFileNotFound = Defaults.ErrorPrompt .. "No files are selected"
+  SelectedFileNotFound = Defaults.ErrorPrompt .. "Inputted filename was not found\n" .. Defaults.ErrorPrompt .. "Try inputting the full path. If that doesn't work, try using the 'contacts' command\n"
 }
 
 
