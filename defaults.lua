@@ -18,7 +18,12 @@ Defaults.Dev =
   SetFile = 
   {
 	PeekElements = Defaults.DevPrompt .. "From " .. Defaults.CommandsDir .. "setfile.lua:\n",
-	ElementsPeeked = Defaults.DevPrompt .. "Finished peeking\n"
+	ElementsPeeked = Defaults.DevPrompt .. "Finished peeking setfile input\n"
+  }
+  Main = 
+  {
+	PeekProcessedInput = Defaults.DevPrompt .. "Input processed into the following:\n",
+	ProcessedInputPeeked = Defaults.DevPrompt .. "Finished peeking full input\n"
   }
 }
 Defaults.Errors = 
