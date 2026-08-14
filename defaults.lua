@@ -24,6 +24,10 @@ Defaults.Dev =
   {
 	PeekProcessedInput = Defaults.DevPrompt .. "Input processed into the following:\n",
 	ProcessedInputPeeked = Defaults.DevPrompt .. "Finished peeking full input\n",
+  },
+  InputProcessor = 
+  {
+	EndOfFunction = Defaults.DevPrompt .. "This code reached the end of the InputProcessor without\n" .. Defaults.DevPrompt .. "finding any matching tablifiers. Most likely something went wrong\n"
   }
 }
 Defaults.Errors = 
