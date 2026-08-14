@@ -1,3 +1,4 @@
+local Defaults = require("defaults")
 local Types = 
 {
   ["normal"] = function(Input)
@@ -24,5 +25,6 @@ local Processor = {}
 
 function Processor.Execute(Type, Input)
   if Types[Type] then return Types[Type](Input) end
+  if Defaults.DevMode then io.write(Defaults.InputProcessor.EndOfFunction) end
 end
 return Processor
