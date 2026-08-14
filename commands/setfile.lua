@@ -1,6 +1,7 @@
 local Defaults = require("defaults")
 local Command = {}
-function Command.Execute(FileName)
+function Command.Execute(Choice)
+  local FileName = Choice[2]
   local File = io.open(FileName, "r")
   if not File then
 	return Defaults.Errors.SelectedFileNotFound
