@@ -9,7 +9,7 @@ local Types =
 		ParsingString = ParsingString .. Sub
 		ResultingTable[#ResultingTable+1] = ParsingString
 		ParsingString = nil
-	  elseif i == " " then
+	  elseif Sub == " " then
 		ResultingTable[#ResultingTable+1] = ParsingString
 		ParsingString = ""
 	  else
