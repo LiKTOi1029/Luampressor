@@ -1,4 +1,4 @@
-local Defaults = require("Defaults")
+local Defaults = require("defaults")
 local Command = {}
 function Command.Execute(FileName)
   if love.filesystem.getInfo(Defaults.SelectedFile) then

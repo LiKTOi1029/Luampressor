@@ -1,4 +1,5 @@
-local Defaults = require("Defaults")
+local Defaults = require("defaults")
+local Commands = require("commandsgetter.lua")
 function love.update(DeltaTime)
   io.write(" > ")
   local Choice = io.read("*line"):upper()
