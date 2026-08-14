@@ -5,6 +5,7 @@ local Defaults =
   NormalPrompt = " > ",
   CommandsDir = "commands/",
   SelectedFile = false, -- false means no file is selected. String if a file is selected.
+  OutputName = "Output",
   CommandsList = {}, -- Intentionally empty, is filled out by commandgetter.lua
   DevMode = true,
   DevPrompt = "D> ",
