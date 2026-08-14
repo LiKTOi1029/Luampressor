@@ -8,10 +8,14 @@ local Defaults =
   CommandsList = {}, -- Intentionally empty, is filled out by commandgetter.lua
   DevMode = true,
 }
+Defaults.Normal = 
+{
+  SelectedTheFile = Defaults.NormalPrompt .. "File selected!\n",
+}
 Defaults.Errors = 
 {
   CommandNotFound = Defaults.ErrorPrompt .. "Command was not found! Please use the help command for commandlist\n",
-  SelectedFileNotFound = Defaults.ErrorPrompt .. "Inputted filename was not found\n" .. Defaults.ErrorPrompt .. "Try inputting the full path. If that doesn't work, try using the 'contacts' command\n"
+  SelectedFileNotFound = Defaults.ErrorPrompt .. "Inputted filename was not found\n" .. Defaults.ErrorPrompt .. "Try inputting the full path. If that doesn't work, try using the 'contacts' command\n",
 }
 
 
