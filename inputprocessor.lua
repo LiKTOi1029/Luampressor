@@ -1,0 +1,28 @@
+local Types = 
+{
+  ["normal"] = function(Input)
+	local ParsingString, ResultingTable = "", {}
+	local Len = Input:len()
+	for i = 1, Len, 1 do
+	  local Sub = Input:sub(i, i)
+	  if i == Len then
+		ParsingString = ParsingString .. Sub
+		ResultingTable[#ResultingTable+1] = ParsingString
+		ParsingString = nil
+	  elseif i == " " then
+		ResultingTable[#ResultingTable+1] = ParsingString
+		ParsingString = ""
+	  else
+		ParsingString = ParsingString .. Sub
+	  end
+	end
+	return ResultingTable
+  end,
+}
+
+local Processor = {}
+
+function Processor.Execute(Type, Input)
+  if Types[Type] then return Types[Type](Input)
+end
+return Processor
