@@ -27,7 +27,8 @@ Defaults.Dev =
   },
   InputProcessor = 
   {
-	EndOfFunction = Defaults.DevPrompt .. "This code reached the end of the InputProcessor without\n" .. Defaults.DevPrompt .. "finding any matching tablifiers. Most likely something went wrong\n"
+	EndOfFunction = Defaults.DevPrompt .. "This code reached the end of the InputProcessor without\n" .. Defaults.DevPrompt .. "finding any matching tablifiers. Most likely something went wrong\n",
+	EndOfNormalType = Defaults.DevPrompt .. "The normal type has been executed in InputProcessor\n",
   }
 }
 Defaults.Errors = 
