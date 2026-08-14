@@ -5,6 +5,6 @@ function love.update(DeltaTime)
   local Choice = io.read("*line"):upper()
   if Choice == "EXIT" then love.event.quit()
   elseif Defaults.CommandsList.CommandNames[Choice] then
-	io.write(Defaults.NormalPrompt, Defaults.CommandsList.CommandNames[Choice](Choice), "\n")
+	io.write(Defaults.NormalPrompt, Defaults.CommandsList.CommandNames[Choice].Execute(Choice), "\n")
   else io.write(Defaults.Errors.CommandNotFound) end
 end
