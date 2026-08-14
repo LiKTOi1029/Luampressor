@@ -1,6 +1,7 @@
 local Defaults =
 {
-  CommandDir = "commands/",
+  CommandsDir = "commands/",
+  SelectedFile = false, -- false means no file is selected. String if a file is selected.
   
 }
 
