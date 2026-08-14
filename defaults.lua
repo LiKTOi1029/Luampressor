@@ -5,7 +5,7 @@ local Defaults =
   NormalPrompt = " > ",
   CommandsDir = "commands/",
   SelectedFile = false, -- false means no file is selected. String if a file is selected.
-  OutputName = "Output",
+  OutputName = "_Output",
   CommandsList = {}, -- Intentionally empty, is filled out by commandgetter.lua
   DevMode = true,
   DevPrompt = "D> ",
@@ -13,6 +13,7 @@ local Defaults =
 Defaults.Normal = 
 {
   SelectedTheFile = Defaults.NormalPrompt .. "File selected!\n",
+  CompressedTheFile = Defaults.NormalPrompt .. "Compressed file!\n",
 }
 Defaults.Dev = 
 {
