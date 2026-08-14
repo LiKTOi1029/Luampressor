@@ -23,6 +23,6 @@ local Types =
 local Processor = {}
 
 function Processor.Execute(Type, Input)
-  if Types[Type] then return Types[Type](Input)
+  if Types[Type] then return Types[Type](Input) end
 end
 return Processor
