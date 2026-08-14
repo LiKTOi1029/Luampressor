@@ -7,6 +7,7 @@ function Getter.Execute()
 	CookedCommands[Index] = File:gsub(".lua", ""):upper()
 	RawCommands[Index] = Defaults.CommandsDir..File
   end
-  return {CommandNames = CookedCommands, CommandPaths = RawCommands,}
+  Defaults.CommandsList = {CommandNames = CookedCommands, CommandPaths = RawCommands,}
+  return true
 end
 return Getter
