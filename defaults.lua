@@ -14,13 +14,14 @@ Defaults.Normal =
 {
   SelectedTheFile = Defaults.NormalPrompt .. "File selected!\n",
   CompressedTheFile = Defaults.NormalPrompt .. "Compressed file!\n",
+  NotImplemented = Defaults.NormalPrompt .. "Not implemented :(\n"
 }
 Defaults.Dev = 
 {
   SetFile = 
   {
 	PeekElements = Defaults.DevPrompt .. "From " .. Defaults.CommandsDir .. "setfile.lua:\n",
-	ElementsPeeked = Defaults.DevPrompt .. "Finished peeking setfile input\n"
+	ElementsPeeked = Defaults.DevPrompt .. "Finished peeking setfile input\n",
   },
   Main = 
   {
@@ -31,7 +32,11 @@ Defaults.Dev =
   {
 	EndOfFunction = Defaults.DevPrompt .. "This code reached the end of the InputProcessor without\n" .. Defaults.DevPrompt .. "finding any matching tablifiers. Most likely something went wrong\n",
 	EndOfNormalType = Defaults.DevPrompt .. "The normal type has been executed in InputProcessor\n",
-  }
+  },
+  Compress = 
+  {
+	SelectedFileExtracted = Defaults.DevPrompt .. "The selected file has been extracted, closing file now\n" .. Defaults.DevPrompt .. "compression begins\n"
+  },
 }
 Defaults.Errors = 
 {
