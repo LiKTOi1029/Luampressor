@@ -35,7 +35,8 @@ Defaults.Dev =
   },
   Compress = 
   {
-	SelectedFileExtracted = Defaults.DevPrompt .. "The selected file has been extracted, closing file now\n" .. Defaults.DevPrompt .. "compression begins\n"
+	SelectedFileExtracted = Defaults.DevPrompt .. "The selected file has been extracted, closing file now\n" .. Defaults.DevPrompt .. "compression begins\n",
+	WordCountPair = Defaults.DevPrompt .. "The word count pair is as follows: \n",
   },
 }
 Defaults.Errors = 
