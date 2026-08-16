@@ -10,6 +10,12 @@ function StandardCompression(Input)
   if Data and Defaults.DevMode then io.write(Defaults.Dev.Compress.SelectedFileExtracted) end
   if not Data then io.write(Defaults.Errors.Compress) end
   File:close()
+  local DataTable = InputProcessor.Execute("prepare_for_compression_lossless", Data)
+  if Defaults.DevMode then io.write(Defaults.Dev.Compress.WordCountPair)
+	for Word, Count in pairs(DataTable.WordCount) do
+	  io.write(Defaults.DevPrompt, Word, " : ", Count, "\n")
+	end
+  end
   
   return Defaults.Normal.CompressedTheFile
 end
