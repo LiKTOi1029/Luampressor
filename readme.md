@@ -34,4 +34,21 @@ human language. Bytes in a computer's memory representing an image, for instance
 down into some known-letters (as far as I know) and work based on the spelling restraints of said alphabet in the 
 same way. I will explain more later in this readme update. Let us get on with some of the basic variables.\
 \
-Let us consider the variable $L$ as the number of __L__etters in the alphabet
+Let us consider the variable $L$ as the number of characters in the keyboard-typable (without alt codes) alphabet. 
+With this in mind, the number of possible 2 byte variations of these is $92^2$ or 8,464 exact different combinations 
+of any of the aforementioned members of low-ascii. Following from this, it is required to abstract this such that 
+we fit all 8,464 different combinations (and more) into a single byte. A single byte can hold $16^2$ different 
+possible combinations of values or 256 different values. Hence, the main problem we immediately face is that if 
+we were to compress a video with the sole intent of condensing two bytes down into one we would have to compress 
+$256^2$ or 65,536 different possible combinations of values. As if condensing 8,464 values down into 256 values 
+wasn't bad enough, I must somehow compress 65,536 different values into this small margin. There are a few ways 
+that we could do this. The first is through a two-dimensional table structure. If we were to assemble a structure 
+consisting of precisely 92 sub-tables containing 92 values. Thus, we have a square structure with which we may 
+represent every single symbol in the alphabet.\
+\
+Now, in theory we only need a system to encode and decode said characters into our compressed format. If we can 
+do this with 2 bytes with 92 combinations of different chars, we can definitely do it with 256 or even more chars. 
+The first step I believe should be first to create the matrix. Then, after this I need a system for discernining 
+which character I will need to use. I am too tired right now to come up with this, however I think I have a good 
+blueprint for what I want to do next. I just don't know how to implement it just yet. For the time being I am 
+going to release my brainchildren here until I come up with something concrete to work off of.
