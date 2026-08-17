@@ -34,4 +34,4 @@ human language. Bytes in a computer's memory representing an image, for instance
 down into some known-letters (as far as I know) and work based on the spelling restraints of said alphabet in the 
 same way. I will explain more later in this readme update. Let us get on with some of the basic variables.\
 \
-Let us consider the variable $L$ as the number of **L**etters in the alphabet
+Let us consider the variable $L$ as the number of __L__etters in the alphabet
