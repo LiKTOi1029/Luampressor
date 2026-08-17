@@ -23,7 +23,8 @@ concocted in my freetime is this: What if I were to encode two bytes (or more if
 compressed information? Well, I was pouring over the math and I don't think it's actually impossible. However, it 
 is all about the algorithm which is compression the given information. The first thing we must consider is that 
 the full range of visible characters able to be inputted from the standard keyboard excluding alt codes is a total 
-of 95 different characters `\;\:\'\"\[\{\]\}\\\|\,\<\.\>\/\?\-\_\=\+\~\`\!\@\#\$\%\^\&\*\(\)\1\2\3\4\5\6\7\8\9\0 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ` 
+of 95 different characters `;:'"[{]}\|,<.>/?-_=+~\!\@\#\$\%\^\&\*\(\)1234567890 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ` 
+(note this list is missing \`, I don't know how to insert that using escape characters in markdown deal with it) 
 I believe that these are all of the keystrokes which most users, programmers and not, use. Of course, there is one 
 problem: I cannot encode images and videos like this perfectly and losslessly. The main caveat with the system 
 I will propose now is that it is entirely catered towards text compression. Thus, if we were to move this immediately 
