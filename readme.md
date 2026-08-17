@@ -15,3 +15,21 @@ are sorted from most-common being at the very top and least common being at the 
 also add a counter for how long each of the most common words are (I.E. there is very little gain out of 
 compressing a 1 letter word such as `I` or `a` in my opinion, but who knows I'm still bad at compression as we 
 speak).
+### 2026 8 17
+I have been doing some research on exactly how I am supposed to do compression, and not gonna lie I really don't 
+think the huffman compression algorithm is the most efficient way to do it. I am going to try something different. 
+What I am thinking of doing is to come up with my own recipe for compression. The first, simplest idea that I have 
+concocted in my freetime is this: What if I were to encode two bytes (or more if possible) into a single byte of 
+compressed information? Well, I was pouring over the math and I don't think it's actually impossible. However, it 
+is all about the algorithm which is compression the given information. The first thing we must consider is that 
+the full range of visible characters able to be inputted from the standard keyboard excluding alt codes is a total 
+of 95 different characters `\;\:\'\"\[\{\]\}\\\|\,\<\.\>\/\?\-\_\=\+\~\`\!\@\#\$\%\^\&\*\(\)\1\2\3\4\5\6\7\8\9\0 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ` 
+I believe that these are all of the keystrokes which most users, programmers and not, use. Of course, there is one 
+problem: I cannot encode images and videos like this perfectly and losslessly. The main caveat with the system 
+I will propose now is that it is entirely catered towards text compression. Thus, if we were to move this immediately 
+to the context of a video or image, we find that in fact the image and vidoe are not the same thing as readable, 
+human language. Bytes in a computer's memory representing an image, for instance, are unable to be simplified 
+down into some known-letters (as far as I know) and work based on the spelling restraints of said alphabet in the 
+same way. I will explain more later in this readme update. Let us get on with some of the basic variables.\
+\
+Let us consider the variable $L$ as the number of $L$etters in the alphabet
